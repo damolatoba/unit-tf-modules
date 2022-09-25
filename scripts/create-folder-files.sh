@@ -1,7 +1,7 @@
 #!/bin/bash
 
-folders=(vnet subnet nsg_and_rules nic pip vm)
-modules_directory_path="/Users/damolatoba/Documents/Project-directories/Personal/source-codes/unit-modules/azure/rg_scope"
+folders=(vpc nsg-and-rules subnet ec2-instance)
+modules_directory_path="/Users/damolatoba/Documents/Project-directories/Personal/source-codes/unit-modules/aws"
 
 create_tf_files_in_all_folders () {
     # change directory to specified directory
