@@ -36,3 +36,4 @@ terraform.rc
 .terraform
 .terraform.*
 .vscode
+sh-scripts
