@@ -12,3 +12,13 @@ variable "tags" {
   type        = map(any)
   description = "value"
 }
+
+variable "nsg_name" {
+  type        = string
+  description = "value"
+}
+
+variable "nsg_rules" {
+  type        = list(any)
+  description = "value"
+}
