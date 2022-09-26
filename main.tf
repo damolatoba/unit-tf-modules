@@ -30,7 +30,7 @@ module "virtual_network" {
   network_name        = "main-network"
   address_space       = ["10.0.0.0/16"]
   subnet_list         = var.subnet_list
-  tags = var.tags
+  tags                = var.tags
   depends_on = [
     module.resource_group.name
   ]
