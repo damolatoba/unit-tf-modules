@@ -13,12 +13,22 @@ variable "tags" {
   description = "value"
 }
 
+variable "virtual_network_name" {
+  type        = string
+  description = "value"
+}
+
 variable "nsg_name" {
   type        = string
   description = "value"
 }
 
 variable "nsg_rules" {
+  type        = list(any)
+  description = "value"
+}
+
+variable "subnet_names" {
   type        = list(any)
   description = "value"
 }

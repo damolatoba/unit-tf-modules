@@ -22,3 +22,16 @@ resource "azurerm_network_security_group" "this" {
     environment = "Production"
   }
 }
+
+data "azurerm_subnet" "this" {
+  count                = length(var.subnet_names)
+  name                 = var.subnet_names[count.index]
+  resource_group_name  = var.resource_group_name
+  virtual_network_name = var.virtual_network_name
+}
+
+resource "azurerm_subnet_network_security_group_association" "this" {
+  count                     = length(var.subnet_names)
+  subnet_id                 = data.azurerm_subnet.this[count.index].id
+  network_security_group_id = azurerm_network_security_group.this.id
+}

@@ -9,7 +9,7 @@ resource "azurerm_virtual_network" "main" {
     content {
       name           = subnet.value["name"]
       address_prefix = subnet.value["address_prefixes"]
-      security_group = subnet.value["security_group"] == "public" ? var.public_nsg : var.private_nsg
+      # security_group = subnet.value["security_group"] == "public" ? var.public_nsg : var.private_nsg
     }
   }
 

@@ -28,12 +28,12 @@ variable "subnet_list" {
   description = "Virtual network name"
 }
 
-variable "public_nsg" {
-  type        = string
-  description = "Virtual network name"
-}
+# variable "public_nsg" {
+#   type        = string
+#   description = "Virtual network name"
+# }
 
-variable "private_nsg" {
-  type        = string
-  description = "Virtual network name"
-}
+# variable "private_nsg" {
+#   type        = string
+#   description = "Virtual network name"
+# }
